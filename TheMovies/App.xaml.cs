@@ -11,7 +11,9 @@ namespace TheMovies
     /// <summary>
     /// Interaction logic for App.xaml
     /// </summary>
-    public partial class App : Application
+    public class Customer
     {
+        public string Email;
+        public string PhoneNumber;
     }
 }
