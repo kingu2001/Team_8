@@ -8,11 +8,16 @@ namespace TheMovies.Models
 {
     public class Order
     {
-        public Customer c { get; set; }
-        public Movie m { get; set; }
-        public Location l { get; set; }
-        public Playtime p { get; set; }
+        public Customer customer { get; set; }
+        public Movie movie { get; set; }
+        public Location location { get; set; }
+        public Playtime playtime { get; set; }
         public int AmountOfTickets { get; set; }
         public int OrderNumber { get; set; }
+
+        public override string ToString()
+        {
+            return $"{customer}:{movie}:{location}:{playtime}:{AmountOfTickets}:{OrderNumber}";
+        }
     }
 }
