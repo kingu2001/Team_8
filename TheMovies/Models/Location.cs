@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TheMovies.Model
+namespace TheMovies.Models
 {
     public class Location
     {
