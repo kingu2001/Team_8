@@ -9,5 +9,10 @@ namespace TheMovies.Models
     public class Playtime
     {
         public DateTime Time { get; set; }
+
+        public override string ToString()
+        {
+            return Time;
+        }
     }
 }
