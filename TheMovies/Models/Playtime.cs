@@ -12,7 +12,8 @@ namespace TheMovies.Models
 
         public override string ToString()
         {
-            return Time;
+            return Time.ToString();
+         
         }
     }
 }

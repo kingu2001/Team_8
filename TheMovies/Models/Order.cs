@@ -18,7 +18,7 @@ namespace TheMovies.Models
 
         public override string ToString()
         {
-            return $"{Customer}:{Movie}:{Location}:{Playtime}:{AmountOfTickets}:{OrderNumber}";
+            return $"{Location},{Playtime},{Movie},{Customer},{AmountOfTickets},{OrderNumber}";
         }
     }
 }

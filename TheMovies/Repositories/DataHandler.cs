@@ -14,17 +14,39 @@ namespace TheMovies.Repositories
         public string CustomerFilename { get; } = "customerdata.csv";
 
 
-        public void Save(Order order)
-        {
-            using (StreamWriter sw = new(OrderFilename))
-            {
+        //public void Save(Order order)
+        //{
+        //    using (StreamWriter sw = new(OrderFilename))
+        //    {
                 
+        //    }
+        //}
+
+        //public void Save(Customer customer)
+        //{
+
+        //}
+
+        public void Load(Order order)
+        {
+            using(StreamReader sr = new StreamReader(OrderFilename))
+            {
+
             }
         }
-
-        public void Save(Customer customer)
+        public void Load(Customer customer)
         {
-
+            using(StreamReader sr = new StreamReader(CustomerFilename))
+            {
+                while (!sr.EndOfStream)
+                {
+                    string line = sr.ReadLine();
+                    if (!line.StartsWith("Biograf"))
+                    {
+                        string[] data = line.Split(',');
+                    }
+                }
+            }
         }
     }
 }

@@ -13,7 +13,7 @@ namespace TheMovies.Models
 
         public override string ToString()
         {
-            return $"{Email}-{PhoneNumber}";
+            return $"{Email},{PhoneNumber}";
         }
     }
 }

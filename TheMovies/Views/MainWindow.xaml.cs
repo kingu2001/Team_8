@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TheMovies.Repositories;
 
 namespace TheMovies
 {
@@ -23,6 +24,8 @@ namespace TheMovies
         public MainWindow()
         {
             InitializeComponent();
+            DataHandler dataHandler = new DataHandler();
+            Console.WriteLine("Hej");
         }
     }
 }

@@ -12,10 +12,11 @@ namespace TheMovies.Models
         public TimeSpan Duration { get; set; }
         public string Director { get; set; }
         public DateTime Premiere { get; set; }
+        public string Genre { get; set; }
 
         public override string ToString()
         {
-            return $"{Title}-{Duration}-{Director}-{Premiere}";
+            return $"{Title},{Duration},{Genre},{Director},{Premiere}";
         }
     }
 }
