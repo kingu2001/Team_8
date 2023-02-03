@@ -8,7 +8,6 @@ namespace TheMovies.Model
 {
     public class Location
     {
-        private string city;
         public string City { get; set; }
     }
 }

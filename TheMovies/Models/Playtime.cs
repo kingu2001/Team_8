@@ -8,7 +8,6 @@ namespace TheMovies.Model
 {
     public class Playtime
     {
-        private DateTime time;
         public DateTime Time { get; set; }
     }
 }
