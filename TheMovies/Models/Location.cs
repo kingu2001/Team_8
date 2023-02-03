@@ -10,6 +10,12 @@ namespace TheMovies.Models
     {
         public string City { get; set; }
 
+        public Location(string city)
+        {
+            City = city;
+        }
+
+
         public override string ToString()
         {
             return City;

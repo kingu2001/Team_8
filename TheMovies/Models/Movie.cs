@@ -14,6 +14,15 @@ namespace TheMovies.Models
         public DateTime Premiere { get; set; }
         public string Genre { get; set; }
 
+        public Movie(string title, TimeSpan duation, string director, DateTime premiere,  string genre)
+        {
+            Title = title;
+            Duration = duation;
+            Director = director;
+            Premiere = premiere;
+            Genre = genre;
+        }
+
         public override string ToString()
         {
             return $"{Title},{Duration},{Genre},{Director},{Premiere}";

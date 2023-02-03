@@ -25,6 +25,7 @@ namespace TheMovies
         {
             InitializeComponent();
             DataHandler dataHandler = new DataHandler();
+            dataHandler.Load();
             Console.WriteLine("Hej");
         }
     }

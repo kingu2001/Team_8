@@ -10,6 +10,11 @@ namespace TheMovies.Models
     {
         public DateTime Time { get; set; }
 
+        public Playtime(DateTime time)
+        {
+            Time = time;
+        }
+
         public override string ToString()
         {
             return Time.ToString();
