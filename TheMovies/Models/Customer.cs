@@ -8,7 +8,7 @@ namespace TheMovies.Model
 {
     public class Customer
     {
-        public string Email;
-        public string PhoneNumber;
+        public string Email { get; set; }
+        public string PhoneNumber { get; set; }
     }
 }
