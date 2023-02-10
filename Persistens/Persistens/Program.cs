@@ -8,12 +8,21 @@ namespace Persistens
     {
         static void Main(string[] args)
         {
-            Person person = new Person("Anders Andersen", new DateTime(1975, 8, 24), 175.9, true, 3);
-            DataHandler handler = new DataHandler("Data.txt");
-            handler.SavePerson(person);
-            Console.Write("Writing Person: ");
+            //Person person = new Person("Anders Andersen", new DateTime(1975, 8, 24), 175.9, true, 3);
+
+
+            DataHandler handler = new();
+            
+            // Create database table
+            //handler.CreateTable();
+
+            // Save person to database
+            //handler.SavePerson(person);
+
+            // Load person from database
+            Person person = handler.LoadPerson();
             Console.WriteLine(person.MakeTitle());
-            Console.ReadLine(); 
+            Console.Read();
         }
     }
 }

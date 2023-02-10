@@ -109,5 +109,10 @@ namespace Persistens
             return title; 
            
         }
+
+        public Person()
+        {
+
+        }
     }
 }
