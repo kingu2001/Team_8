@@ -60,7 +60,6 @@ namespace PetParadise
                 SqlCommand cmd = new SqlCommand("SELECT * FROM Owner WHERE OwnerFirstName = @FirstName AND OwnerLastName = @LastName", con);
                 cmd.Parameters.Add("@FirstName", SqlDbType.NVarChar).Value = firstName;
                 cmd.Parameters.Add("@LastName", SqlDbType.NVarChar).Value = lastName;
-
                 using (SqlDataReader dr = cmd.ExecuteReader())
                 {
                     while (dr.Read())
