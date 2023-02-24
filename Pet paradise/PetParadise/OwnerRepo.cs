@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
+using System.Linq.Expressions;
 using System.Text;
 using System.Xml.Linq;
 
@@ -9,10 +11,9 @@ namespace PetParadise
     public class OwnerRepo
     {
         private List<Owner> owners = new List<Owner>();
-
+        string connectionString = DatabaseHelper.con;
         public OwnerRepo()
         {
-            string connectionString = DatabaseHelper.con;
             using (SqlConnection con = new SqlConnection(connectionString))
             {
                 con.Open();
@@ -44,8 +45,20 @@ namespace PetParadise
         {
             // Add new owner to database and to repository
             // Return the database id of the owner
+            int result = 0;
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                con.Open();
 
-            int result = -1;
+                SqlCommand cmd = new SqlCommand("INSERT INTO Owner (OwnerFirstName, OwnerLastName, OwnerPhone, OwnerEmail) VALUES (@OwnerFirstName, @OwnerLastName, @OwnerPhone, @OwnerEmail)", con);
+
+                cmd.Parameters.Add("@OwnerFirstName", SqlDbType.NVarChar).Value = owner.FirstName;
+                cmd.Parameters.Add("@OwnerLastName", SqlDbType.NVarChar).Value = owner.LastName;
+                cmd.Parameters.Add("@OwnerPhone", SqlDbType.NVarChar).Value = owner.Phone;
+                cmd.Parameters.Add("@OwnerEmail", SqlDbType.NVarChar).Value = owner.Email;
+                result = int.Parse(cmd.ExecuteScalar().ToString());
+            }
+
 
             // IMPLEMENT THIS!
 
@@ -64,24 +77,29 @@ namespace PetParadise
         public Owner GetById(int id)
         {
             // Get owner by id from database
+           Owner owner = owners.Find(owner => owner.OwnerId == id);
 
-            Owner result = null;
+       
 
             // IMPLEMENT THIS!
 
-            return result;
+            return owner;
         }
         public void Update(Owner owner)
         {
             // Update existing owner on database
 
             // IMPLEMENT THIS!
+            Owner newOwner = owners.Find(newNewOwner => newNewOwner.OwnerId == owner.OwnerId);
+            owners.Remove(newOwner);
+            owners.Add(owner);
         }
         public void Remove(Owner owner)
         {
             // Delete existing owner in database
 
             // IMPLEMENT THIS!
+            owners.Remove(owner); 
         }
 
     }
