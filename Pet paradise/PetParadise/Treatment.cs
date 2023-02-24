@@ -13,7 +13,7 @@ namespace PetParadise
 
         public override string ToString()
         {
-            return $"{TreatId}: {Service} on {Date} costs {Charge}";
+            return $"{TreatId}: {Service} on {Date.ToString("dd-MM-yyyy HH':'mm':'ss")} costs {Charge}";
         }
     }
 }

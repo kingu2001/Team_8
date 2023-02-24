@@ -11,7 +11,7 @@ namespace PetParadise
     public class OwnerRepo
     {
         private List<Owner> owners = new List<Owner>();
-        string connectionString = DatabaseHelper.con;
+        string connectionString = DatabaseHelper.conn;
         public OwnerRepo()
         {
             using (SqlConnection con = new SqlConnection(connectionString))

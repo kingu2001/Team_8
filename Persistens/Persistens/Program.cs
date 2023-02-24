@@ -12,7 +12,7 @@ namespace Persistens
 
 
             DataHandler handler = new();
-            
+
             // Create database table
             //handler.CreateTable();
 
@@ -20,7 +20,7 @@ namespace Persistens
             //handler.SavePerson(person);
 
             // Load person from database
-            Person person = handler.LoadPerson();
+            Person person = handler.LoadPerson("\"Anders Andersen\"; DROP TABLE Persons;");
             Console.WriteLine(person.MakeTitle());
             Console.Read();
         }

@@ -9,7 +9,7 @@ namespace PetParadise
     public class PetRepo
     {
         private List<Pet> pets = new List<Pet>();
-        string connectionString = DatabaseHelper.con;
+        string connectionString = DatabaseHelper.conn;
 
         public PetRepo()
         {
@@ -30,7 +30,10 @@ namespace PetParadise
                         pet.Name = ((dr["PetName"].ToString()));
                         pet.PetType = (PetTypes)Enum.Parse(typeof(PetTypes),(dr["PetType"].ToString()));
                         pet.Breed = (dr["PetBreed"].ToString());
-                        pet.DOB = DateTime.Parse(dr["PetDOB"].ToString());
+                        if (dr["PetDOB"].ToString() != "")
+                        {
+                            pet.DOB = DateTime.Parse(dr["PetDOB"].ToString());
+                        }
                         pet.Weight = double.Parse((dr["PetWeight"].ToString()));
                         pets.Add(pet);
                     }

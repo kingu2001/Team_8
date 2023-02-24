@@ -15,7 +15,7 @@ namespace PetParadise
 
         public override string ToString()
         {
-            return $"{PetId}: {Name}, {PetType}, {Breed}, {DOB}, {Weight}";
+            return $"{PetId}: {Name}, {PetType}, {Breed}, {DOB.ToString("dd-MM-yyyy HH':'mm':'ss")}, {Weight}";
         }
     }
 }
