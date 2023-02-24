@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Text;
+using System.Xml.Linq;
 
 namespace PetParadise
 {
@@ -10,9 +12,32 @@ namespace PetParadise
 
         public OwnerRepo()
         {
+            string connectionString = DatabaseHelper.con;
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand("SELECT * FROM Owner", con);// WHERE Name = '@Name'", con);
+               
+                using (SqlDataReader dr = cmd.ExecuteReader())
+                {
+                    while (dr.Read())
+                    {
+                        Owner owner = new Owner();
+                        owner.OwnerId = int.Parse(dr["OwnerId"].ToString());
+                        owner.FirstName = (dr["OwnerFirstName"].ToString());
+                        owner.LastName = (dr["OwnerLastName"].ToString());
+                        owner.Phone = (dr["OwnerPhone"].ToString());
+                        owner.Email = (dr["OwnerEmail"].ToString());
+                        owners.Add(owner);
+                    }
+                    
+                }
+                
+            }
+        
             // Load all owner data from database via SQL statements and populate owner repository
 
-            // IMPLEMENT THIS!
+                // IMPLEMENT THIS!
         }
 
         public int Add(Owner owner)
@@ -30,7 +55,7 @@ namespace PetParadise
         {
             // Retrieve all owners from database
 
-            List<Owner> result = null;
+            List<Owner> result = owners;
 
             // IMPLEMENT THIS!
 
