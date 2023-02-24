@@ -12,14 +12,13 @@ namespace Persistens
     {
         private string connectionString = "Server=10.56.8.36;Database=DB_2023_27;User Id=STUDENT_27;Password=OPENDB_27;";
 
-        public Person LoadPerson()
+        public Person LoadPerson(string name)
         {
             using (SqlConnection con = new SqlConnection(connectionString))
             {
                 con.Open();
 
-                SqlCommand cmd = new SqlCommand("SELECT Name, Birthdate, Height, IsMarried, NoOfChildren FROM Persons", con);// WHERE Name = '@Name'", con);
-                //cmd.Parameters.Add("@Name", SqlDbType.NVarChar).Value = name;
+                SqlCommand cmd = new SqlCommand($"SELECT Name, Birthdate, Height, IsMarried, NoOfChildren FROM Persons WHERE Name = {name}", con);// WHERE Name = '@Name'", con);
                 Person person = null;
                 using (SqlDataReader dr = cmd.ExecuteReader())
                 {
