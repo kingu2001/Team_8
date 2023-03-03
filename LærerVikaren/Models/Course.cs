@@ -6,8 +6,15 @@ using System.Threading.Tasks;
 
 namespace LærerVikaren.Models
 {
-    public enum Course
+    public class Course
     {
-       Dansk, Engelsk, Fysik, Tysk, Matematik
-    }
+		private string _courseName;
+
+		public string CourseName
+		{
+			get { return _courseName; }
+			set { _courseName = value; }
+		}
+
+	}
 }
