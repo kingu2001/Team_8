@@ -10,7 +10,7 @@ namespace LærerVikaren.Persistence
 {
     internal class StudentTeacherRepo
     {
-        private List<StudentTeacher> studentTeachers = new List<StudentTeacher>();
+        private Dictionary<int,StudentTeacher> studentTeachers = new Dictionary<int, StudentTeacher>();
 
         string connectionString = "Server=10.56.8.36; database=DB_2023_37; user id=STUDENT_37; password=OPENDB_37;";
         public StudentTeacherRepo()
@@ -25,14 +25,13 @@ namespace LærerVikaren.Persistence
                     while (dr.Read())
                     {
                         StudentTeacher studentTeacher = new StudentTeacher();
-                        studentTeacher.ID = int.Parse(dr["ID"].ToString());
                         studentTeacher.Name = (dr["Name"].ToString());
                         studentTeacher.PhoneNo = (dr["PhoneNo"].ToString());
                         studentTeacher.SSNo = (dr["SSNo"].ToString());
                         studentTeacher.Certificate = (dr["Certificate"].ToString());
 
 
-                        studentTeachers.Add(studentTeacher);
+                        studentTeachers.Add(int.Parse(dr["ID"].ToString()), studentTeacher);
                     }
 
                 }

@@ -11,6 +11,7 @@ namespace LærerVikaren.Models
 		private int _number;
 		private DateTime _invoiceDate;
 		private int _fk_tempHour;
+		
 
 		public int Fk_TempHour
 		{
