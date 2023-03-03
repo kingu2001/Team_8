@@ -62,5 +62,16 @@ namespace LærerVikaren.Persistence
 
             return result;
         }
+        public Invoice GetByInoviceNo(int id)
+        {
+            // Get owner by id from database
+            Invoice invoice = invoices.Find(invoice => invoice.Number == id);
+
+
+
+            // IMPLEMENT THIS!
+
+            return invoice;
+        }
     }
 }
