@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace LærerVikaren.Models
 {
-    internal class Course
+    public enum Course
     {
+       Dansk, Engelsk, Fysik, Tysk, Matematik
     }
 }

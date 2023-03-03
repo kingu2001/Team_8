@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace LærerVikaren.Models
 {
-    internal class NumberCode
+    public enum NumberCode
     {
+       Før12 = 1,
+       Efter12 = 2,
+       HeleDagen = 3
     }
 }
