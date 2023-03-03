@@ -8,6 +8,6 @@ namespace LærerVikaren.Models
 {
     public enum Course
     {
-       Dansk, Engelsk, Fysik, Tysk, Matematik
+       Dansk = 1, Engelsk, Fysik, Matematik, Tysk
     }
 }
