@@ -6,8 +6,20 @@ using System.Threading.Tasks;
 
 namespace LærerVikaren.Models
 {
-    public enum Course
+    public class Course
     {
-       Dansk = 1, Engelsk, Fysik, Matematik, Tysk
+      List<String> courses;
+        
+        public Course()
+        {
+            courses = new List<String>() {
+            "Dansk",
+            "Engelsk",
+            "Fysik",
+            "Matematik",
+            "tysk"
+            };
+        }
+        
     }
 }
