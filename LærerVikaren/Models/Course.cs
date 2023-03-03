@@ -8,18 +8,13 @@ namespace LærerVikaren.Models
 {
     public class Course
     {
-      List<String> courses;
-        
-        public Course()
-        {
-            courses = new List<String>() {
-            "Dansk",
-            "Engelsk",
-            "Fysik",
-            "Matematik",
-            "tysk"
-            };
-        }
-        
-    }
+		private string _courseName;
+
+		public string CourseName
+		{
+			get { return _courseName; }
+			set { _courseName = value; }
+		}
+
+	}
 }
