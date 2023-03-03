@@ -12,6 +12,13 @@ namespace LærerVikaren.Models
 		private string _phoneNo;
 		private string _ssNo;
 		private string _certificate;
+		private int _ID;
+
+		public int ID
+		{
+			get { return _ID; }
+			set { _ID = value; }
+		}
 
 		public string Certificate
 		{
@@ -40,13 +47,9 @@ namespace LærerVikaren.Models
 			set { _name = value; }
 		}
 
-		public StudentTeacher(string name, string phoneNo, string ssNo, string certificate)
-		{
-			name = Name;
-			phoneNo = PhoneNo;
-			ssNo = SSNo;
-			certificate = Certificate; 
-		}
+		public StudentTeacher() { }
+		
+		
 
 
 	}
