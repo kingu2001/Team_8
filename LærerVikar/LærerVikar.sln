@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32825.248
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LærerVikaren", "..\LærerVikaren\LærerVikaren.csproj", "{F9ED0796-04DC-43CD-93C1-815FBDC24A3F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModelPersistence", "..\ModelPersistence\ModelPersistence.csproj", "{8AA957C1-E7A7-4E66-A4C4-036035B8F326}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F9ED0796-04DC-43CD-93C1-815FBDC24A3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9ED0796-04DC-43CD-93C1-815FBDC24A3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9ED0796-04DC-43CD-93C1-815FBDC24A3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9ED0796-04DC-43CD-93C1-815FBDC24A3F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8AA957C1-E7A7-4E66-A4C4-036035B8F326}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AA957C1-E7A7-4E66-A4C4-036035B8F326}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AA957C1-E7A7-4E66-A4C4-036035B8F326}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AA957C1-E7A7-4E66-A4C4-036035B8F326}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4D6675FD-C4F8-4328-B934-E991B7310CB5}
+	EndGlobalSection
+EndGlobal
