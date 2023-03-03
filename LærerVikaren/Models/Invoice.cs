@@ -8,8 +8,16 @@ namespace LærerVikaren.Models
 {
     public class Invoice
     {
-		private string _number;
+		private int _number;
 		private DateTime _invoiceDate;
+		private int _fk_tempHour;
+
+		public int Fk_TempHour
+		{
+			get { return _fk_tempHour; }
+			set { _fk_tempHour = value; }
+		}
+
 
 		public DateTime InvoiceDate
 		{
@@ -18,7 +26,7 @@ namespace LærerVikaren.Models
 		}
 
 
-		public string Number
+		public int Number
 		{
 			get { return _number; }
 			set { _number = value; }
